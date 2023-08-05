@@ -1,0 +1,22 @@
+.header {
+	text-align: center;
+}
+
+.pageHeading {
+	display: inline-block;
+	position: relative;
+	font-size: 32px;
+	letter-spacing: 1px;
+	padding-bottom: 16px;
+}
+
+.pageHeading::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	height: 4px;
+	width: 50%;
+	background: red;
+	transform: translateX(-50%);
+}
