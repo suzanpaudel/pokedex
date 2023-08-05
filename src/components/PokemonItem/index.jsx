@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
 import styles from "./styles.module.css";
+import getImageUrl from "../../utils/getImageUrl";
 
 const PokemonItem = ({ pokemon }) => {
 	if (!pokemon) {
@@ -15,6 +16,7 @@ const PokemonItem = ({ pokemon }) => {
 
 	const paddedId = "#" + id.toString().padStart(3, "000");
 	const customClass = types.map(({ type }) => "card-" + type.name).join(" ");
+	const imageUrl = getImageUrl(id);
 
 	return (
 		<Col
@@ -34,7 +36,7 @@ const PokemonItem = ({ pokemon }) => {
 						</div>
 						<div className={styles.cardImg}>
 							<img
-								src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
+								src={imageUrl}
 								alt={name}
 							/>
 						</div>
