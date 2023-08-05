@@ -1,11 +1,13 @@
 .header {
 	text-align: center;
+	margin: 56px 0;
 }
 
 .pageHeading {
 	display: inline-block;
 	position: relative;
-	font-size: 32px;
+	font-size: 48px;
+	font-weight: 800;
 	letter-spacing: 1px;
 	padding-bottom: 16px;
 }
@@ -17,6 +19,6 @@
 	bottom: 0;
 	height: 4px;
 	width: 50%;
-	background: red;
+	background: #fb6c6c;
 	transform: translateX(-50%);
 }
