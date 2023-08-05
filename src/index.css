@@ -9,6 +9,10 @@ body {
 	background-color: aliceblue;
 }
 
+p {
+	margin: 0;
+}
+
 ul {
 	padding-left: 0;
 }

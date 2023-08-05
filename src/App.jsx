@@ -1,44 +1,47 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import PokemonList from "./pages/PokemonList";
-import PokemonDetails from "./pages/PokemonDetails";
+import PokemonsProvider from "./context/PokemonsProvider";
 import MyTeam from "./pages/My Team";
-import generations from "./data/generation";
+import PokemonsList from "./pages/PokemonsList";
+import PokemonDetails from "./pages/PokemonDetails";
 import PageNotFound from "./pages/PageNotFound";
+import generations from "./data/generation";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route
-					path="/"
-					element={
-						<Navigate
-							to={generations[0].link}
-							replace
-						/>
-					}
-				/>
-				{generations.map(generation => (
+		<PokemonsProvider>
+			<BrowserRouter>
+				<Routes>
 					<Route
-						key={generation.id}
-						path={generation.link}
-						element={<PokemonList />}
+						path="/"
+						element={
+							<Navigate
+								to={generations[0].link}
+								replace
+							/>
+						}
 					/>
-				))}
-				<Route
-					path="pokemon/:id"
-					element={<PokemonDetails />}
-				/>
-				<Route
-					path="my-team"
-					element={<MyTeam />}
-				/>
-				<Route
-					path="*"
-					element={<PageNotFound />}
-				/>
-			</Routes>
-		</BrowserRouter>
+					{generations.map(generation => (
+						<Route
+							key={generation.id}
+							path={generation.link}
+							element={<PokemonsList genId={generation.id} />}
+						/>
+					))}
+					<Route
+						path="pokemon/:id"
+						element={<PokemonDetails />}
+					/>
+					<Route
+						path="my-team"
+						element={<MyTeam />}
+					/>
+					<Route
+						path="*"
+						element={<PageNotFound />}
+					/>
+				</Routes>
+			</BrowserRouter>
+		</PokemonsProvider>
 	);
 }
 
