@@ -5,6 +5,7 @@ import { PokemonsContext } from "../../context/PokemonsProvider";
 import { fetchPokemonData, fetchPokemons } from "../../api";
 
 import generations from "../../data/generation";
+import { ClipLoader } from "react-spinners";
 
 const PokemonsView = ({ genId }) => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +42,19 @@ const PokemonsView = ({ genId }) => {
 	}, [genId, fetchData]);
 
 	if (isLoading) {
-		return <p>Loading...</p>;
+		return (
+			<ClipLoader
+				color="#062949"
+				loading={isLoading}
+				cssOverride={{
+					display: "block",
+					margin: "0 auto",
+				}}
+				size={150}
+				aria-label="Loading Spinner"
+				data-testid="loader"
+			/>
+		);
 	}
 
 	return (

@@ -8,6 +8,8 @@ import NavBtn from "../../components/NavBtn";
 import { Card, Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 import getImageUrl from "../../utils/getImageUrl";
 import styles from "./styles.module.css";
+import About from "./About";
+import Stats from "./Stats";
 
 const PokemonDetails = () => {
 	const { pokemonName } = useParams();
@@ -80,28 +82,16 @@ const PokemonDetails = () => {
 									<Tab
 										eventKey="about"
 										title="About"
+										className={styles.customTab}
 									>
-										<ul>
-											<li>
-												<span>Species</span> Grass, Poison
-											</li>
-											<li>
-												<span>Height</span> 70cm
-											</li>
-
-											<li>
-												<span>Weight</span> 5.9kg
-											</li>
-											<li>
-												<span>Abilities</span> Overgrow, Chlorophyll
-											</li>
-										</ul>
+										<About pokemonData={pokemonData} />
 									</Tab>
 									<Tab
 										eventKey="baseStat"
 										title="Base Stat"
+										className={styles.customTab}
 									>
-										Tab content for Profile
+										<Stats stats={pokemonData.stats} />
 									</Tab>
 								</Tabs>
 								<div className={styles.btnContainer}>
@@ -125,8 +115,6 @@ const PokemonDetails = () => {
 					</Col>
 				</Row>
 			</Container>
-
-			{/* Render the rest of your Pokemon details here */}
 		</div>
 	);
 };

@@ -1,9 +1,10 @@
 .card {
+	position: relative;
 	border-radius: 50px !important;
 	overflow: hidden;
 	border: none !important;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-	position: relative;
+	margin-bottom: 50px;
 }
 
 /* .actionBtn {
@@ -77,6 +78,48 @@
 	background-color: #fff;
 }
 
+:global(button.nav-link) {
+	color: #000 !important;
+	border: none !important;
+}
+
+:global(li.nav-item .nav-link:hover) {
+	background-color: #ccc;
+	color: #000 !important;
+}
+
+:global(button.nav-link.active) {
+	font-weight: 800;
+	border-bottom: 4px solid #6c79db !important;
+}
+
+.customTab {
+	padding: 20px;
+}
+
+.customTab ul {
+	list-style: none;
+	padding-left: 0 !important;
+	margin-bottom: 0;
+}
+
+.customTab ul li {
+	margin-bottom: 10px;
+}
+
+.customTab ul li:last-child {
+	margin-bottom: 0;
+}
+
+.customTab ul li span:first-child {
+	display: inline-block;
+	min-width: 100px;
+	font-weight: 600;
+}
+
+.customTab ul li span:last-child {
+	text-transform: capitalize;
+}
 .btnContainer {
 	text-align: center;
 }

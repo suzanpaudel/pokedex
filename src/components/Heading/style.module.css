@@ -22,3 +22,9 @@
 	background: #fb6c6c;
 	transform: translateX(-50%);
 }
+
+@media (max-width: 768px) {
+	.pageHeading {
+		font-size: 32px;
+	}
+}

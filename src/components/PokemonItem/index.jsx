@@ -18,9 +18,9 @@ const PokemonItem = ({ pokemon }) => {
 
 	return (
 		<Col
-			md={4}
-			sm={6}
-			xs={12}
+			lg={4}
+			md={6}
+			sm={12}
 		>
 			<Link to={`/pokemon/${name}`}>
 				<Card className={`${styles.card} ${customClass}`}>
