@@ -22,7 +22,7 @@ const PokemonItem = ({ pokemon }) => {
 			sm={6}
 			xs={12}
 		>
-			<Link to={`/pokemon/${id}`}>
+			<Link to={`/pokemon/${name}`}>
 				<Card className={`${styles.card} ${customClass}`}>
 					<Card.Body className={styles.cardBody}>
 						<div className={styles.cardInfo}>

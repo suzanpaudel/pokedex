@@ -21,13 +21,12 @@ const MyTeamProvider = ({ children }) => {
 		setMyTeam(prevMyTeam => [...prevMyTeam, pokemon]);
 	};
 
-	const removePokemonHandler = pokemonId => {
-		setMyTeam(prevMyTeam => prevMyTeam.filter(pokemon => pokemon.id !== parseInt(pokemonId)));
-		console.log(myTeam);
+	const removePokemonHandler = pokemonName => {
+		setMyTeam(prevMyTeam => prevMyTeam.filter(pokemon => pokemon.name !== pokemonName));
 	};
 
-	const isInTheTeam = pokemonId => {
-		return myTeam.some(pokemon => pokemon.id === parseInt(pokemonId));
+	const isInTheTeam = pokemonName => {
+		return myTeam.some(pokemon => pokemon.name === pokemonName);
 	};
 
 	const pokemonContextValue = {
