@@ -7,6 +7,20 @@ import PokemonItem from "../../components/PokemonItem";
 
 const MyTeam = () => {
 	const { myTeam } = useContext(MyTeamContext);
+
+	const getMyTeamData = () => {
+		if (myTeam.length === 0) {
+			return <p className="text-center">No pokemons added to your team!</p>;
+		} else {
+			return myTeam.map(pokemon => (
+				<PokemonItem
+					key={pokemon.id}
+					pokemon={pokemon}
+				/>
+			));
+		}
+	};
+
 	return (
 		<>
 			<NavBtn
@@ -15,14 +29,7 @@ const MyTeam = () => {
 			/>
 			<Heading title="My Team" />
 			<Container>
-				<Row>
-					{myTeam.map(pokemon => (
-						<PokemonItem
-							key={pokemon.id}
-							pokemon={pokemon}
-						/>
-					))}
-				</Row>
+				<Row>{getMyTeamData()}</Row>
 			</Container>
 		</>
 	);
