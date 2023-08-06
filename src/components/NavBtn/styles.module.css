@@ -1,0 +1,15 @@
+.navBtn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background-color: #6c79db;
+	color: #fff;
+	padding: 8px 16px;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+.navBtn:hover {
+	color: #fff;
+	background-color: #5b69d7;
+}
