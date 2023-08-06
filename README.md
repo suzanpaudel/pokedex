@@ -1,6 +1,6 @@
 # Pokedex App
 
-This is a react app that is build using Vite. This app implements the pokedex api to create a list of pokemon's and get their stats. Here the user is able to add pokemon to his/her team which is preserved on the state reload.
+This is a react app that is build using Vite. This app implements the pokedex api to create a list of pokemons and get their stats. Here the user is able to add pokemon to his/her team which is preserved on the state reload.
 
 
 ### Installation
