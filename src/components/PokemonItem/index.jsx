@@ -12,8 +12,6 @@ const PokemonItem = ({ pokemon }) => {
 
 	const { name, id, types } = pokemon;
 
-	console.log(types);
-
 	const paddedId = "#" + id.toString().padStart(3, "000");
 	const customClass = types.map(({ type }) => "card-" + type.name).join(" ");
 	const imageUrl = getImageUrl(id);

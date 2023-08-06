@@ -28,7 +28,7 @@ function App() {
 						/>
 					))}
 					<Route
-						path="pokemon/:id"
+						path="pokemon/:pokemonId"
 						element={<PokemonDetails />}
 					/>
 					<Route
