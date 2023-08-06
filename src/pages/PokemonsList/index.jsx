@@ -1,9 +1,9 @@
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
+import NavBtn from "../../components/NavBtn";
 import Heading from "../../components/Heading";
 import Navigation from "../../components/Navigation";
 import PokemonsView from "../../components/PokemonsView";
-import NavBtn from "../../components/NavBtn";
 
 const PokemonsList = ({ genId }) => {
 	return (

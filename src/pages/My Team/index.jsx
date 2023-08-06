@@ -1,9 +1,10 @@
-import { Container, Row } from "react-bootstrap";
-import Heading from "../../components/Heading";
-import NavBtn from "../../components/NavBtn";
 import { useContext } from "react";
-import { MyTeamContext } from "../../context/MyTeamProvider";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import NavBtn from "../../components/NavBtn";
+import Heading from "../../components/Heading";
 import PokemonItem from "../../components/PokemonItem";
+import { MyTeamContext } from "../../context/MyTeamProvider";
 
 const MyTeam = () => {
 	const { myTeam } = useContext(MyTeamContext);

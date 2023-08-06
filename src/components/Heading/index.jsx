@@ -1,4 +1,5 @@
 import styles from "./style.module.css";
+
 const Heading = ({ title }) => {
 	return (
 		<header className={styles.header}>

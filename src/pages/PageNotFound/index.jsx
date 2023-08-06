@@ -1,4 +1,5 @@
 import Heading from "../../components/Heading";
+
 import styles from "./styles.module.css";
 
 const PageNotFound = () => {

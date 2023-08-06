@@ -1,5 +1,5 @@
-import generations from "../../data/generation";
 import NavItem from "./NavItem";
+import generations from "../../data/generation";
 
 import styles from "./styles.module.css";
 

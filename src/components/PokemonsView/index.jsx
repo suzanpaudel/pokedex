@@ -1,11 +1,11 @@
-import { Container, Row } from "react-bootstrap";
-import PokemonItem from "../PokemonItem";
 import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import { ClipLoader } from "react-spinners";
+import PokemonItem from "../PokemonItem";
 import { PokemonsContext } from "../../context/PokemonsProvider";
 import { fetchPokemonData, fetchPokemons } from "../../api";
-
 import generations from "../../data/generation";
-import { ClipLoader } from "react-spinners";
 
 const PokemonsView = ({ genId }) => {
 	const [isLoading, setIsLoading] = useState(false);

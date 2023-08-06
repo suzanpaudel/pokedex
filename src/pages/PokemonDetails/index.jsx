@@ -1,15 +1,19 @@
 import { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 import Heading from "../../components/Heading";
 import { MyTeamContext } from "../../context/MyTeamProvider";
-import { fetchPokemonData } from "../../api";
 import NavBtn from "../../components/NavBtn";
-import { Card, Col, Container, Row, Tab, Tabs } from "react-bootstrap";
-import getImageUrl from "../../utils/getImageUrl";
-import styles from "./styles.module.css";
 import About from "./About";
 import Stats from "./Stats";
+import { fetchPokemonData } from "../../api";
+import getImageUrl from "../../utils/getImageUrl";
+import styles from "./styles.module.css";
 
 const PokemonDetails = () => {
 	const { pokemonName } = useParams();

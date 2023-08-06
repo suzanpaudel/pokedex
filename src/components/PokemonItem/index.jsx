@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import getImageUrl from "../../utils/getImageUrl";
 
 import styles from "./styles.module.css";
-import getImageUrl from "../../utils/getImageUrl";
 
 const PokemonItem = ({ pokemon }) => {
 	if (!pokemon) {
